@@ -1,0 +1,323 @@
+/*--------- 8. Skills area starts --------------*/
+.skills_div{
+    height: 100vh;
+}
+.skills-area .section-title h2{
+    color: #fff;
+   
+}
+
+.skills-area{
+    position: relative;
+    background-image: url('/images/skills2.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 1;
+    height: 100vh;
+    padding:80px 0 ;
+}
+.skills-area:before{
+    position: absolute;
+    content: '';
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.skills-title{
+    text-align: center;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+   
+
+.skills-title h2 {
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.skills-title h2 span {
+    color: #e5f56f;
+}
+.skills
+{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.skills h2
+{
+    margin: 15px 0 0;
+    padding: 0;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.skill-name{
+    color: #d2d5d8;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  .skill-bar{
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+  }
+  
+  .skill-per{
+    height: 20px;
+    background-color: #ef5e4a;
+    border-radius: 8px;
+    width: 0;
+    transition: 2s linear;
+    position: relative;
+  }
+  
+  .skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .skill-per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+  }
+
+  .html5 {
+    width: 80%;
+    animation: html5 2s ease-out;
+    -moz-animation: html5 2s ease-out;
+    -webkit-animation: html5 2s ease-out;
+}
+  @keyframes html5 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+@-moz-keyframes html5 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+
+@-webkit-keyframes html5 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+
+.css {
+    width: 75%;
+    animation: css 2s ease-out;
+    -moz-animation: css 2s ease-out;
+    -webkit-animation: css 2s ease-out;
+}
+  @keyframes css {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+@-moz-keyframes css {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+
+@-webkit-keyframes css {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+
+
+.js {
+    width: 70%;
+    animation: js 2s ease-out;
+    -moz-animation: js 2s ease-out;
+    -webkit-animation: js 2s ease-out;
+}
+  @keyframes js {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+@-moz-keyframes js {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+
+@-webkit-keyframes js {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+
+
+.net {
+    width: 80%;
+    animation: net 2s ease-out;
+    -moz-animation: net 2s ease-out;
+    -webkit-animation: net 2s ease-out;
+}
+  @keyframes net {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+@-moz-keyframes net {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+
+@-webkit-keyframes net {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+
+.db {
+    width: 75%;
+    animation: db 2s ease-out;
+    -moz-animation: db 2s ease-out;
+    -webkit-animation: db 2s ease-out;
+}
+  @keyframes db {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+@-moz-keyframes db {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+
+@-webkit-keyframes db {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    };
+}
+
+
+.react {
+    width: 70%;
+    animation: react 2s ease-out;
+    -moz-animation: react 2s ease-out;
+    -webkit-animation: react 2s ease-out;
+}
+  @keyframes react {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+@-moz-keyframes react {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+
+@-webkit-keyframes react {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+
+/*--------- Skills area ends --------------*/

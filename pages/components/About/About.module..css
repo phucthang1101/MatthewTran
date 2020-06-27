@@ -1,0 +1,303 @@
+.about_div{
+  padding: 80px 0;
+  
+    background: #efeeee;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.text-center {
+    text-align: center;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.white-color {
+    color: #ffffff;
+}
+.horizontal-line div {
+    background: #d6ea3e none repeat scroll 0 0;
+    height: 2px;
+    margin: 0 auto;
+    width: 77px;
+}
+.horizontal-line div.top {
+    margin-bottom: 3px;
+    width: 44px;
+}
+.section-title h2{
+    font-size: 32px;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+/*---------- 6. About area css starts---------------*/
+
+.stack {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.stack img {
+    background: #fff;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px;
+    width: 71%;
+    -moz-box-shadow:    1px 1px 2px rgba(0,0,0,.25);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+    box-shadow:         1px 1px 2px rgba(0,0,0,.25);
+}
+
+.stack::before {
+    background: #969696;
+    content: "";
+    width: 71%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+}
+
+.btn-a {
+    animation-delay: 2s;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding: 14px 22px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-animation-delay: 2s;
+    -webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
+    animation-delay: 2s;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 20px;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.skill-btn {
+    background: #00b0dc;
+    border: 1px solid #ffffff;
+    color: #fff;
+}
+
+.down-btn {
+    background: none;
+    color: #2B2F37;
+    border: 1px solid #00b0dc;
+}
+
+.about-text-left {
+    margin-top: 90px;
+}
+
+.about-text-left p {
+    text-align: right;
+    font-size: 15px;
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+
+.about-right h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.about-text-right h3 {
+    color: #fafafa;
+    margin-bottom: 45px;
+}
+
+.about-text-right h6 {
+    color: #333333;
+}
+
+.about-right p span {
+    color: #262626;
+    font-weight: bold;
+   
+}
+
+.about-list{
+    list-style: none;
+}
+.about-list h5{
+    text-align: center;
+}
+.about-right .about-list li {
+    margin-bottom: 10px;
+}
+.about-right .about-list li .title {
+    position: relative;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    color: #a1a1a1;
+    font-weight: 700;
+}
+.about-right .about-list li .title:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #e1e1e1;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.about-right .about-list li .title:after {
+    position: absolute;
+    content: ':';
+    right: -8px;
+}
+.about-right .about-list li .value {
+    position: relative;
+}
+.about-right .about-list li .value:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/*-------About area css ends--------------*/
+
+
+/* --------------Hire me hidden door button effect --------------*/
+.trapdoor {
+    -webkit-transform: translateZ(0px);
+    -webkit-font-smoothing: antialiased;
+    width: 154px;
+    height: 50px;
+    box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
+    transition: background 400ms ease-in-out;
+    margin: 20px 15px 0 0;
+}
+  .trapdoor:hover {
+  
+  }
+  .trapdoor:hover .door {
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+  .trapdoor:hover .top {
+   top: -20%
+  }
+  .trapdoor:hover .bottom {
+    top: 100%;
+  }
+  .trapdoor .twitter-follow-button {
+   
+    position: absolute !important;
+    /* margin-top: -14px; */
+    left: 46%;
+    /* text-align: center; */
+    top: 42%;
+    color: black;
+  }
+  
+  .top {
+    top: 0%;
+    left: 0px;
+  }
+  .top:before {
+    top: 5px;
+  }
+  
+  .bottom {
+    top: 50%;
+    left: 0px;
+  }
+  .bottom:before {
+    top: -20px;
+  }
+  
+  .door {
+    -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
+    -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
+    -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
+    -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+   
+    background: #ecf7a4;
+     height: 60%;
+  }
+  .door:before {
+    font-family: "Arial", sans-serif;
+    position: absolute;
+    /* margin-left: -0px; */
+    font-size: 22px;
+    /* color: #e5f56f; */
+    content: "Hire me";
+    border: 2px solid #e55743;
+    padding: 5px 5px 3px 5px;
+    /* left: 20%; */
+    width: 100%;
+    text-align: center;
+  }
+  
+
+/*-------Hire me hidden door button effect ends--------------*/
+
+/* Simple Border Button */
+.ct-btn{
+    margin: 25px 15px 0 0;
+    width: 154px;
+    height: 45px;
+
+}.border-neon:hover, .border-neon:focus {
+    box-shadow: 0px 0px 10px 3px #b851d8, inset 0px 0px 10px 3px #a542c7;
+    border-color: #fdc5cf;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff94b8, 0 0 40px #ff94b8, 0 0 50px #ff94b8, 0 0 60px #ff94b8, 0 0 70px #ff94b8;
+}
+.border-neon {
+    width: 102%;
+    height: 102%;
+    background-color: transparent;
+    border: 2px solid #e55743;
+    color: #253842;
+    transition: all .3s ease-in-out;
+    font-weight: 700;
+}

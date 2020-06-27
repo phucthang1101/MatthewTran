@@ -1,0 +1,167 @@
+.service_area{
+   
+    background-color: #c5c5c5;
+}
+
+
+
+.service-title{
+    text-align: center;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+   
+.service-title h2 {
+    font-size: 40px;
+    color: #0e0a01c4;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.service-title h2 span {
+    color: #b71111;
+}
+/*-------- 7. Services area starts ----------*/
+.section-padding {
+    padding: 60px 0;
+}
+
+.service {
+    text-align: center;
+}
+
+.service-box {
+    padding: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    transition: .9s;
+    background: black;
+    /* border-color: white; */
+    border: 1px solid black;
+}
+
+.service-icon  {
+    font-size: 80px;
+    color: #00B0DC;
+    margin-bottom: 20px;
+}
+.service-content{
+    color:white;
+}
+
+.service-box:hover:after {
+    top: 0;
+    height: 100%;
+    transition: 0.9s;
+}
+
+.service-box:hover .after {
+    bottom: 0;
+    height: 100%;
+    transition: 0.9s;
+}
+
+.service-box:hover:before {
+    left: 0;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.service-box:hover .before {
+    right: 0;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.service-box:hover:before,
+.service-box:hover .before {
+    width: 100%;
+    transition: 0.9s;
+}
+
+.service-box:after {
+    height: 80%;
+    width: 2px;
+    content: '';
+    top: 10%;
+    left: 0px;
+    transition: 0.9s;
+}
+
+.service-box .before,
+.service-box .after,
+.service-box:before,
+.service-box:after {
+    background: white;
+    position: absolute;
+    transition: 0.9s;
+}
+
+.service-box:before {
+    height: 2px;
+    width: 80%;
+    content: '';
+    top: 0px;
+    left: 10%;
+    transition: 0.9s;
+}
+
+.service-box .before {
+    height: 2px;
+    width: 80%;
+    bottom: 0px;
+    right: 10%;
+    transition: 0.9s;
+}
+
+.service-box .after {
+    height: 80%;
+    width: 2px;
+    bottom: 10%;
+    right: 0px;
+    transition: 0.9s;
+}
+
+/*-------- Services area ends ----------*/
+
+.service-icon .database path{
+    fill:transparent;
+    stroke-width:5;
+    stroke: red;
+}
+
+svg{
+    overflow: visible;
+}
+
+
+.service-icon .database path{
+   stroke-dasharray: 2300;
+    stroke-dashoffset: 0;
+}
+.service-box:hover path{
+    animation: animate-database 2s linear forwards;
+   }
+  
+
+.service-icon .database:hover path{
+  animation: animate-database 2s linear forwards;
+ }
+
+ @keyframes animate-database 
+ {
+     0%{
+        stroke-dashoffset: 0;
+     }
+     40%{
+        stroke-dashoffset: 2300;
+     }
+     80%{
+        stroke-dashoffset: 4600;
+        fill:transparent
+     }
+     100%{
+        stroke-dashoffset: 4600;
+        fill:#dad967
+     }
+ }

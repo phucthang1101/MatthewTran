@@ -1,0 +1,176 @@
+
+.contact_div{
+  position: relative;
+  height: 100vh;
+  background: url('/images/skills7.jpg');
+  padding-top: 132px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 1;
+  color: white;
+ 
+}
+.contact_div:before{
+  position: absolute;
+  content: '';
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.contact-wrapper {
+    margin: 100px auto 0;
+    width: 70%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  form {
+    width: 100%;
+    margin: 0;
+  }
+  
+  form * {
+    font-size: 20px;
+    letter-spacing: 0.075em;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  form .field label {
+    color: #0e0606;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #edf978, #e65050);
+    width: 100%;
+    height: 64px;
+    transition: width 333ms ease-in-out;
+    text-align: center;
+    padding: 18px 0;
+    font-weight: 500;
+  }
+  
+  form .field input[type="text"],
+  form .field textarea {
+    border: none;
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    padding-left: 19.5%;
+    color: #313a3d;
+  }
+  
+  form #msg {
+    height: 64px;
+    resize: none;
+    transition: all 333ms ease-in-out;
+    padding-top: 18px;
+  }
+  form textarea:focus#msg,
+  form textarea:not(:placeholder-shown)#msg {
+    height: 166px;
+  }
+  form input[type="text"]:focus + label,
+  form input[type="text"]:not(:placeholder-shown) + label,
+  form textarea:focus + label,
+  form textarea:not(:placeholder-shown) + label,
+  form .field:hover label {
+    width: 18%;
+  }
+  form input[type="submit"] {
+    background: linear-gradient(90deg, #b13e8b, #812d65);
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    padding: 13px 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus {
+    background: #372056;  
+  }
+  
+  .contact-title span{
+    color: #e5f56f;
+  }
+  
+  .contact-title h2{
+    color: #f4f2f2;
+    font-size: 2rem;
+  }
+  .contact-title p{
+    font-size: 18px;
+    margin-top: 12px
+  }
+  
+/* contact area
+----------------*/
+.section-title h2 {
+    color: #494949;
+  }
+  .contact-area .section-title p {
+      color: #777777;
+  }
+  .contact-area .horizontal-line div {
+    margin: 0 !important;
+  }
+  .contact-area .horizontal-line div.top {
+    margin-bottom: 5px;
+  }
+  .contact-text{
+    list-style: none;
+    padding: 0;
+  }
+  .contact-text li {
+      margin-bottom: 25px;
+  }
+  .contact-text li:last-child{
+      margin-bottom: 0px;
+  }
+  .contact-text li i {
+     
+      border-radius: 50%;
+      float: left;
+      font-size: 19px;
+      height: 47px;
+      line-height: 47px;
+     
+      width: 47px;
+      color: #e3ef8c;
+  }
+  .contact-text li h4,
+  .contact-text li span {
+    position: relative;
+    top: 5px;
+  }
+  .contact-text li h4 {
+    font-size: 22px;
+      color: #e8706b;
+  }
+  .contact-text li span,
+  .contact-text li h4 {
+      overflow: hidden;
+  }
+  .contact-text li span a,
+  .contact-text li span {
+    font-size: 17px;
+      color: white;
+  }
+  .contact-text li span a:hover {
+      color: white;
+  }
