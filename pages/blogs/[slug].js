@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import Layout from '../../components/Layout';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { readBlog, listRelatedBlogs } from '../../actions/blogAction';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';
 import renderHTML from 'react-render-html';
@@ -63,6 +63,9 @@ const SingleBlog = ({ blog, router, query, categories }) => {
 
   //fire loadRelatedBlog() when componentDidMount
   useEffect(() => {
+    // document.addEventListener('DOMContentLoaded', function () {
+
+    // });
     setValues({ ...values, formData: new FormData() });
     setReplyCommentValues({
       ...replyCommentValues,
@@ -70,6 +73,7 @@ const SingleBlog = ({ blog, router, query, categories }) => {
     });
     loadRelatedBlog();
     loadComments();
+    TableOfContents();
   }, []);
 
   const { error, success, formData, username, commentText, email } = values;
@@ -109,6 +113,56 @@ const SingleBlog = ({ blog, router, query, categories }) => {
       <meta name='fb:app_id' content={`${FB_APP_ID}`} />
     </Head>
   );
+
+  const TableOfContents = () => {
+    var toc = '';
+    var level = 0;
+    //console.log('onload');
+
+    document.getElementById('contents').innerHTML = document
+      .getElementById('contents')
+      .innerHTML.replace(/<h([\d])>([^<]+)<\/h([\d])>/gi, function (
+        str,
+        openLevel,
+        titleText,
+        closeLevel
+      ) {
+        if (openLevel != closeLevel) {
+          return str;
+        }
+
+        if (openLevel > level) {
+          toc += new Array(openLevel - level +1 ).join('<ol>');
+        } else if (openLevel < level) {
+          toc += new Array(level - openLevel +1).join('</ol>');
+        }
+
+        level = parseInt(openLevel);
+
+        var anchor = titleText.replace(/ /g, '_');
+        toc += '<li><a class="toc_item" href="#' + anchor + '">' + titleText + '</a></li>';
+
+        return (
+          '<h' +
+          openLevel +
+          '><a name="' +
+          anchor +
+          '">' +
+          titleText +
+          '</a></h' +
+          closeLevel +
+          '>'
+        );
+      });
+
+    if (level) {
+    
+      toc += new Array(level + 1).join('</ol>');
+      console.log(toc)
+    }
+
+    document.getElementById('toc').innerHTML += toc;
+  };
 
   const showBlogCategories = (blog) =>
     blog.categories.map((category, index) => {
@@ -176,7 +230,7 @@ const SingleBlog = ({ blog, router, query, categories }) => {
         });
         loadComments();
         toast.success('Comment created successfully');
-       // console.log('index: ', index);
+        // console.log('index: ', index);
         let formId = `replyCommentForm-${index}`;
         document.getElementById(formId).style.display = 'none';
         setReplyCommentValues({
@@ -379,8 +433,13 @@ const SingleBlog = ({ blog, router, query, categories }) => {
 
               <div className='container'>
                 <section id='blog-content'>
-                  <div className='col-md-12 single-blog__content mb-40'>
-                    {renderHTML(blog.body)}
+                  <div className='col-md-12 single-blog__content mb-40 ql-editor'>
+                    <div id='toc'>
+                      <h3>Table of Contents</h3>
+                    </div>
+                    <hr />
+                    <div id='contents'> {renderHTML(blog.body)}</div>
+
                     <div className='text-center mt-5'>
                       <span className='wavy-line__container '>
                         <svg

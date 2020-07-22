@@ -46,6 +46,8 @@ export const readBlog = (slug) => {
 };
 
 export const listRelatedBlogs = (blog) => {
+  delete blog.body; 
+//  console.log(blog)
   return fetch(`${API}/blogs/related`, {
     method: 'POST',
     headers: {
@@ -106,9 +108,9 @@ export const updateAdminBlog = (blog, token, slug) => {
 };
 
 export const listSearch = (params) => {
-  console.log('search params before: ', params);
+//  console.log('search params before: ', params);
   let query = queryString.stringify(params);
-  console.log('search params after: ', query);
+//  console.log('search params after: ', query);
   return fetch(`${API}/blogs/search?${query}`, {
     method: 'GET',
   })

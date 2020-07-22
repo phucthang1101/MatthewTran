@@ -45,6 +45,15 @@ class MyDocument extends Document {
             rel='stylesheet'
             href='https://unpkg.com/react-quill@1.3.3/dist/quill.snow.css'
           />
+
+          <link
+            rel='stylesheet'
+            href='//cdn.quilljs.com/1.3.6/quill.snow.css'
+          />
+          <link
+            href='//cdn.quilljs.com/1.3.6/quill.bubble.css'
+            rel='stylesheet'
+          />
           <link
             rel='stylesheet'
             href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
@@ -52,6 +61,10 @@ class MyDocument extends Document {
           <link
             rel='stylesheet'
             href='https://unpkg.com/simplebar@latest/dist/simplebar.css'
+          />
+          <link
+            rel='stylesheet'
+            href='https://cdn.jsdelivr.net/npm/quill-emoji@0.1.7/dist/quill-emoji.css'
           />
           <link
             rel='stylesheet'
@@ -98,6 +111,9 @@ class MyDocument extends Document {
             crossOrigin='anonymous'
           ></script>
           <script src='https://code.iconify.design/1/1.0.6/iconify.min.js'></script>
+          <script src='//cdn.quilljs.com/1.3.6/quill.js'></script>
+          <script src='https://cdn.jsdelivr.net/npm/quill-emoji@0.1.7/dist/quill-emoji.min.js'></script>
+          <script src='//cdn.quilljs.com/1.3.6/quill.min.js'></script>
         </body>
       </Html>
     );

@@ -7,8 +7,8 @@ import { getCookie, isAuth } from '../../actions/authAction';
 import { getCategories } from '../../actions/categoryAction';
 import { getTags } from '../../actions/tagAction';
 import { createBlog } from '../../actions/blogAction';
-import { QuillModules, QuillFormats } from '../../helper/quill';
 
+import { QuillModules, QuillFormats } from '../../helper/quill';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const BlogCreateComponent = ({ router }) => {
@@ -56,6 +56,75 @@ const BlogCreateComponent = ({ router }) => {
     initCategories();
     initTags();
   }, [router]);
+
+  useEffect(() => {
+    dynamicallyImportPackage();
+  }, []);
+
+  let dynamicallyImportPackage = async () => {
+    const { Quill } = await import('react-quill');
+
+    let BlockEmbed = Quill.import('blots/block/embed');
+
+    class DividerBlot extends BlockEmbed {}
+    DividerBlot.blotName = 'hr';
+    DividerBlot.tagName = 'hr';
+    Quill.register(DividerBlot);
+
+    // custome Block with entered className
+    // let classNamePrompt;
+    // class divClassname extends Block {
+    //   static create(value) {
+    //     let node = super.create(value);
+    //     //    node.innerText = value;
+    //     //  console.log('value: ', value);
+    //     classNamePrompt = prompt('Enter the URL');
+    //     node.setAttribute('class', classNamePrompt);
+    //     //   console.log('value: ', classNamePrompt);
+    //     return node;
+    //   }
+
+    //   value() {
+    //     return this.domNode.innerText;
+    //   }
+    // }
+    // divClassname.blotName = 'div-class';
+    // // console.log(classNamePrompt);
+    // // divClassname.className = classNamePrompt;
+    // divClassname.tagName = 'div';
+    // Quill.register(divClassname);
+
+    // Wrapping all tag is <div> instead of <p>
+    // var Block = Quill.import('blots/block');
+    // Block.tagName = 'div';
+    // Quill.register(Block);
+ 
+    //Code block <code></code>
+    // class CustomCode extends BlockEmbed {
+    //   static create(value) {
+    //     // let {lang, content} = value;
+    //     let node = super.create(value);
+    //     //  console.log(value)
+    //    // node = document.createElement('code');
+    //     //    code.setAttribute('class', lang);
+    //     node.textContent = value;
+    // //    node.appendChild(code);
+    //     return node;
+    //   }
+
+    //   static value(node) {
+    //     // console.log(node)
+    //     return {
+    //       content: node.firstChild.innerText,
+    //     };
+    //   }
+    // }
+
+    // CustomCode.blotName = 'code-custom';
+    // CustomCode.className = 'abc';
+    // CustomCode.tagName = 'code';
+    // Quill.register(CustomCode);
+  };
 
   const initCategories = () => {
     getCategories().then((data) => {

@@ -7,13 +7,15 @@ import { getCookie, isAuth } from '../../actions/authAction';
 import { getCategories } from '../../actions/categoryAction';
 import { getTags } from '../../actions/tagAction';
 import { readBlog, updateAdminBlog } from '../../actions/blogAction';
-import { QuillModules, QuillFormats } from '../../helper/quill';
 import { DOMAIN, API } from '../../config';
+import { QuillModules, QuillFormats } from '../../helper/quill';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-const BlogUpdateComponent = ({ router }) => {
+toast.configure();
 
+const BlogUpdateComponent = ({ router }) => {
   const [body, setBody] = useState('');
 
   //preview image:
@@ -35,7 +37,6 @@ const BlogUpdateComponent = ({ router }) => {
     formData: '',
     title: '',
     showing: '',
-   
   });
 
   const { error, success, formData, title, showing } = values;
@@ -58,6 +59,62 @@ const BlogUpdateComponent = ({ router }) => {
     };
     fileReader.readAsDataURL(file);
   }, [file]);
+
+  useEffect(() => {
+    dynamicallyImportPackage();
+  }, []);
+
+  let dynamicallyImportPackage = async () => {
+    const { Quill } = await import('react-quill');
+    //  console.log(Quill);
+    // you can now use the package in here
+    // var Block = Quill.import('blots/block');
+    // var Embed = Quill.import('blots/embed');
+
+    // let Parchment = Quill.import('parchment');
+    // //const Parchment = await import('parchment');
+    // let config = { scope: Parchment.Scope.BLOCK };
+    // let SpanBlockClass = new Parchment.Attributor.Class(
+    //   'my-thing',
+    //   'span',
+    //   config
+    // );
+    // Quill.register(SpanBlockClass, true);
+
+    let BlockEmbed = Quill.import('blots/block/embed');
+
+    class DividerBlot extends BlockEmbed {}
+    DividerBlot.blotName = 'hr';
+    DividerBlot.tagName = 'hr';
+    Quill.register(DividerBlot);
+
+    // let classNamePrompt;
+    // class divClassname extends Block {
+    //   static create(value) {
+    //     let node = super.create(value);
+    //     //    node.innerText = value;
+    //     //  console.log('value: ', value);
+    //     classNamePrompt = prompt('Enter the URL');
+    //     node.setAttribute('class', classNamePrompt);
+    //     //   console.log('value: ', classNamePrompt);
+    //     return node;
+    //   }
+
+    //   value() {
+    //     return this.domNode.innerText;
+    //   }
+    // }
+    // divClassname.blotName = 'div-class';
+    // // console.log(classNamePrompt);
+    // // divClassname.className = classNamePrompt;
+    // divClassname.tagName = 'div';
+
+    // Quill.register(divClassname);
+
+    // var Block = Quill.import('blots/block');
+    // Block.tagName = 'div';
+    // Quill.register(Block);
+  };
 
   const initBlog = () => {
     if (router.query.slug) {
@@ -137,7 +194,7 @@ const BlogUpdateComponent = ({ router }) => {
     } else {
       all.splice(checkedTags, 1);
     }
-
+  //  console.log(all)
     setCheckedTags(all);
     formData.set('tags', all);
   };
@@ -200,7 +257,7 @@ const BlogUpdateComponent = ({ router }) => {
 
   const handleChange = (name) => (e) => {
     //console.log(e.target.value);
-    console.log(name)
+   // console.log(name);
     const value =
       name === 'photo'
         ? e.target.files[0]
@@ -228,16 +285,19 @@ const BlogUpdateComponent = ({ router }) => {
 
   const editBlog = (event) => {
     event.preventDefault();
+  
     updateAdminBlog(formData, token, router.query.slug).then((data) => {
       if (data.error) {
         setValues({ ...values, error: data.error });
+        toast.error(data.error);
       } else {
         setValues({
           ...values,
           title: '',
           success: `Blog title "${data.title}" is successfully updated`,
         });
-        Router.replace(`/admin/blogs`);
+        // Router.replace(`/admin/blogs`);
+        toast.success(`Blog title "${data.title}" is successfully updated`);
       }
     });
   };
@@ -284,6 +344,28 @@ const BlogUpdateComponent = ({ router }) => {
 
   const pickImageHandler = () => {
     filePickerRef.current.click();
+  };
+
+  const showError = () => {
+    return (
+      <div
+        className='alert alert-danger'
+        style={{ display: error ? '' : 'none' }}
+      >
+        {error}
+      </div>
+    );
+  };
+
+  const showSuccess = () => {
+    return (
+      <div
+        className='alert alert-success'
+        style={{ display: success ? '' : 'none' }}
+      >
+        {success}
+      </div>
+    );
   };
 
   return (
