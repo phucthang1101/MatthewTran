@@ -5,7 +5,7 @@ import {isAuth} from '../../actions/authAction';
 const Admin = ({children})=>{
     useEffect(()=>{
         if(!isAuth()){
-            Router.push('/signin')
+            Router.push('/signIn')
         }
         else if(isAuth().role !== 1)
         {
