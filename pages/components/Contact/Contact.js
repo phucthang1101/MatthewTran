@@ -127,7 +127,7 @@ const Contact = () => {
                     id='name'
                     name='name'
                     placeholder='Who are you?'
-                    autoFocus
+                    
                     onChange={handleChange('name')}
                     value={name}
                   />
