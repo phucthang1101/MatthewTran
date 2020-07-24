@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { css, jsx } from '@emotion/core';
 import FullWidthSliderContent from './fullWidthSliderContent';
-import FullWidthSlide from './FullWidthSlide';
+import FullWidthSlide from './fullWidthSlide';
 import Arrow from './Arrow';
 import FullWidthDots from './fullWidthDots';
 import { CSSTransition } from 'react-transition-group';

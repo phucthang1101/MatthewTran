@@ -1,7 +1,7 @@
 import $ from 'jquery';
 // export for others scripts to use
 
-export const typeWriter = () => {
+ const typeWriter = () => {
   //set animation timing
   var animationDelay = 2500,
     //loading bar effect
@@ -204,3 +204,5 @@ export const typeWriter = () => {
     $newWord.removeClass('is-hidden').addClass('is-visible');
   }
 };
+
+export default typeWriter;

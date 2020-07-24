@@ -1,6 +1,6 @@
 import jQuery from 'jquery';
 
-export const initTimeline = () => {
+ const initTimeline = () => {
   jQuery(document).ready(function ($) {
     var timelines = $('.cd-horizontal-timeline'),
       eventsMinDistance = 100;
@@ -433,3 +433,5 @@ export const initTimeline = () => {
     }
   });
 };
+
+export default initTimeline;

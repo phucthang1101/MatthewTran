@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Scrollspy from 'react-scrollspy';
 import Particles from 'react-particles-js';
-import { typeWriter } from './typeWriter';
+import  typeWriter  from './typeWriter';
 import { DOMAIN } from '../../../config';
 import smoothscroll from 'smoothscroll-polyfill';
 
