@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import SignUpComponent from '../components/auth/SignUpComponent';
 
-const signUp = (props) => {
+const signup = (props) => {
   
   return (
    <Layout>
@@ -19,4 +19,4 @@ const signUp = (props) => {
   );
 };
 
-export default signUp;
+export default signup;

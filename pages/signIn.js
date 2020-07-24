@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import SignInComponent from '../components/auth/SignInComponent';
 
-const signIn = (props) => {
+const signin = (props) => {
   return (
     <Layout>
       <h2 className='text-center pt-4 pb-4'>Signin</h2>
@@ -14,4 +14,4 @@ const signIn = (props) => {
   );
 };
 
-export default signIn;
+export default signin;
