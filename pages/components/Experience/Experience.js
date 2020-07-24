@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import  initTimeline  from './initTimeline';
+import  initTimeline  from '../../../components/initTimeline';
 
 const Experience = () => {
   useEffect(() => {

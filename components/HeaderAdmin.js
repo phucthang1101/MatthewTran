@@ -15,7 +15,7 @@ import { isAuth, signout } from '../actions/authAction';
 import { APP_NAME } from '../config';
 import NProgress from 'nprogress';
 import SearchBlog from './blog/SearchBlog';
-import FullWidthNavs from '../pages/components/ImageSlider/fullWidthNav';
+import FullWidthNavs from '../components/ImageSlider/fullWidthNav';
 
 Router.onRouteChangeStart = (url) => NProgress.start();
 Router.onRouteChangeComplete = (url) => NProgress.done();

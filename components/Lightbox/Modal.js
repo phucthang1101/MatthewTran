@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 import Backdrop from './Backdrop';
 import Slider from '../ImageSlider/Slider';
-import { DOMAIN } from '../../../config';
+import { DOMAIN } from '../../config';
 
 const getSlides = (projectName) => {
   switch (projectName) {

@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { getCategories } from '../../actions/categoryAction';
 import CardBlog from '../../components/blog/CardBlog';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';
-import FullWidthSlider from '../components/ImageSlider/fullWidthSlider';
+import FullWidthSlider from '../../components/ImageSlider/fullWidthSlider';
 
 const Blogs = ({ router, categories }) => {
   const [modalWidth, setModalWidth] = useState(0);

@@ -5,7 +5,7 @@ import { css, jsx } from '@emotion/core';
 import { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import renderHTML from 'react-render-html';
-import { DOMAIN } from '../../../config';
+import { DOMAIN } from '../../config';
 
 const FullWidthSlide = (props) => {
   const { slide, width, caption, name, show, index, slug } = props;

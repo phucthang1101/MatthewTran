@@ -4737,12 +4737,14 @@ svg {
 }
 
 @media only screen and (min-width: 1200px) {
-  .blog-footer__container,
-  .SearchBlog-container {
+  .blog-footer__container{
     padding-right: 12%;
     padding-left: 12%;
     padding-bottom: 0;
     padding-top: 0;
+  }
+  .SearchBlog-container {
+   padding:12%;
   }
 }
 

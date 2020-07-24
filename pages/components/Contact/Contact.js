@@ -131,7 +131,7 @@ const Contact = () => {
                     onChange={handleChange('name')}
                     value={name}
                   />
-                  <label for='name'>NAME</label>
+                  <label htmlFor='name'>NAME</label>
                 </div>
                 <div className='field'>
                   <input
@@ -142,7 +142,7 @@ const Contact = () => {
                     onChange={handleChange('email')}
                     value={email}
                   />
-                  <label for='email'>EMAIL</label>
+                  <label htmlFor='email'>EMAIL</label>
                 </div>
                 <div className='field'>
                   <textarea
@@ -152,7 +152,7 @@ const Contact = () => {
                     onChange={handleChange('message')}
                     value={message}
                   ></textarea>
-                  <label for='msg'>MESSAGE</label>
+                  <label htmlFor='msg'>MESSAGE</label>
                 </div>
                 <input className='button' type='submit' value='Send' />
               </form>

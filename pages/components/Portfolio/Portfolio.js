@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import Modal from '../Lightbox/Modal';
-import Button from '../Lightbox/Button';
+import Modal from '../../../components/Lightbox/Modal';
+import Button from '../../../components/Lightbox/Button';
 // npm install --save-dev @iconify/react @iconify/icons-zmdi
 import { Icon, InlineIcon } from '@iconify/react';
 import filterCenterFocus from '@iconify/icons-zmdi/filter-center-focus';
 import bxLinkExternal from '@iconify/icons-bx/bx-link-external';
+import { DOMAIN } from '../../../config';
 
 function filterSelection(c) {
   var btnContainer = document.getElementById('myBtnContainer');
@@ -66,9 +67,12 @@ function w3RemoveClass(element, name) {
 const Portfolio = () => {
   const [showLightBox, setShowLightBox] = useState(false);
   const [project, setProject] = useState();
-  const openLightBoxHandler = (name) => {
+  const [headerName,setHeaderName] = useState();
+  const openLightBoxHandler = (projectName,name) => {
+   // console.log(projectName)
     setShowLightBox(true);
     setProject(name);
+    setHeaderName(projectName);
   };
 
   const closeLightBoxHandler = () => setShowLightBox(false);
@@ -86,7 +90,7 @@ const Portfolio = () => {
         projectName={project}
         show={showLightBox}
         onCancel={closeLightBoxHandler}
-        header='Test'
+        header={headerName}
         contentclassName='place-item__modal-content'
         footerclassName='place-item__modal-actions'
         footer={<Button onClick={closeLightBoxHandler}>CLOSE</Button>}
@@ -161,7 +165,7 @@ const Portfolio = () => {
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('yurivisa')}
+                    onClick={() => openLightBoxHandler('Website Yurivisa','yurivisa')}
                   >
                     <a>
                       <span
@@ -205,7 +209,7 @@ const Portfolio = () => {
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('daidung')}
+                    onClick={() => openLightBoxHandler('Website DaiDung','daidung')}
                   >
                     <a>
                       <span
@@ -248,7 +252,7 @@ const Portfolio = () => {
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('vibotani')}
+                    onClick={() => openLightBoxHandler('Website Vibotani','vibotani')}
                   >
                     <a>
                       <span
@@ -291,7 +295,7 @@ const Portfolio = () => {
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('todolist')}
+                    onClick={() => openLightBoxHandler('Todo List','todolist')}
                   >
                     <a>
                       <span
@@ -334,7 +338,7 @@ const Portfolio = () => {
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('expenseTracker')}
+                    onClick={() => openLightBoxHandler('Expense Tracker ','expenseTracker')}
                   >
                     <a>
                       <span
@@ -364,21 +368,31 @@ const Portfolio = () => {
               </div>
 
               <div className='six grid-item personalWebsite reactjs'>
-                <div className='overlay'>
+              <div className='overlay'>
                   <div className='items'></div>
                   <div className='items head'>
-                    <p>Flower Embroidery Hoop Art</p>
+                    <p>MERN App: Personal Blog</p>
                   </div>
-                  <div className='items price'>
-                    <p className='old'>$699</p>
-                    <p className='new'>$345</p>
+                  <div className='items subhead'>
+                    <p>
+                      MongoDB + ExpressJS + ReactJS + NodeJS + NextJS<br />
+                      (05/2020 - 08/2020)
+                    </p>
                   </div>
-                  <div className='items cart'>
-                    <i className='fa fa-shopping-cart'></i>
-                    <span>ADD TO CART</span>
+                  <div
+                    className='items price'
+                   
+                  >
+                   <a href={`${DOMAIN}/blogs`} title="Matthew's Blog">
+                      <span
+                        className='iconify'
+                        data-icon='bx:bx-link-external'
+                      ></span>
+                    </a>
                   </div>
+                  
                 </div>
-              </div>
+               </div>
 
               <div className='seven grid-item locationSharing mernStack'>
                 <div className='overlay'>
@@ -394,7 +408,7 @@ const Portfolio = () => {
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('locationSharing')}
+                    onClick={() => openLightBoxHandler('Location Sharing','locationSharing')}
                   >
                     <a>
                       <span

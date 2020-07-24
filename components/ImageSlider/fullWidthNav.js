@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import React, { useState, useEffect } from 'react';
 import { css, jsx } from '@emotion/core';
-import { DOMAIN } from '../../../config';
-import SearchBlog from '../../../components/blog/SearchBlog';
+import { DOMAIN } from '../../config';
+import SearchBlog from '../blog/SearchBlog';
 
 const FullWidthNav = (props) => {
   const { active, index, slide, page, singleBlog } = props;
