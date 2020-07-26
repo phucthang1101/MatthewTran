@@ -39,10 +39,10 @@ const CardBlog = (props) => {
         <div ref={headerBlog} className='row mx-auto card-blog__header-info'>
           <div className='col-12 col-md-2 card-blog__header--moment'>
             <div className='moment-day'>
-              {moment(blog.updatedAt).toObject().date}
+              {moment(blog.createdAt).toObject().date}
             </div>
             <div className='moment-month'>
-              {moment(blog.updatedAt).format('MMMM')}
+              {moment(blog.createdAt).format('MMMM')}
             </div>
           </div>
           <div className='col-12 col-md-10 card-blog__header--url'>
