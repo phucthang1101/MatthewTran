@@ -21,7 +21,7 @@ const About = () => {
         <div className='col-md-5 col-sm-12'>
           <div className='about-section__content-avatar'>
           {/* <div className='about-avatar'></div> */}
-            <img src={`${DOMAIN}/static/images/IMG_1299.jpg`} alt='about' />
+            <img src={`${DOMAIN}/static/images/avatar2.jpg`} alt='about' />
           </div>
         </div>
         <div className='col-md-7 col-sm-12'>
