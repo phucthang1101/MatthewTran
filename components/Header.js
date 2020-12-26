@@ -32,6 +32,8 @@ const Header = (props, scrollableNodeRef) => {
     let scrollbar = props.scrollableNodeRef.current
       ? props.scrollableNodeRef.current
       : '';
+       console.log(props.scrollableNodeRef)
+      console.log(scrollbar)
     if (scrollbar !== '') {
       // console.log(scrollbar.getScrollElement())
       scrollbar.getScrollElement().addEventListener('scroll', () => {

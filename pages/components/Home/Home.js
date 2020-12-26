@@ -22,7 +22,7 @@ const Home = (props) => {
     let scrollbar = props.scrollableNodeRef.current
       ? props.scrollableNodeRef.current
       : '';
-
+    
     if (typeof window !== 'undefined') {
       if (scrollbar !== '') {
         scrollbar.getScrollElement().addEventListener('scroll', () => {

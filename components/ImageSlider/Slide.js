@@ -35,7 +35,7 @@ const Slide = ({ slide, width, caption }) => {
         height: 90%;
         width: ${width}px;
         background-image: url('${slide}');
-     
+     background-size:cover;
         @media (max-width: 700px) {
           background-size: contain;
       }
@@ -48,7 +48,18 @@ const Slide = ({ slide, width, caption }) => {
         ${'' /* background-position: center; */}
       `}
         ></div>
-        <p>{caption}</p>
+        <p
+         css={css`
+        font-size:20px;
+        padding-top:10px;
+        margin:0;
+        @media (max-width: 700px) {
+          font-size:14px;
+        padding-top:0px;
+      }
+       
+      `}
+      >{caption}</p>
       </div>
     </React.Fragment>
   );

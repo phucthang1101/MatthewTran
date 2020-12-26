@@ -79,9 +79,9 @@ const Contact = () => {
                   <span>
                     <a
                       className='montserrat weight-regular'
-                      href='tel:+88-669-658-6586'
+                      href='tel:5199995215'
                     >
-                      +88 669 658 6586
+                      +1 519 999 5215
                     </a>
                   </span>
                 </li>
@@ -107,7 +107,7 @@ const Contact = () => {
                     Location
                   </h4>
                   <span className='montserrat weight-regular capitalize'>
-                    Location Name,here.US
+                    Windsor Ontario, Canada
                   </span>
                 </li>
               </ul>

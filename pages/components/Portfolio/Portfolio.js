@@ -184,7 +184,7 @@ const Portfolio = () => {
                       ></span>
                     </a>
                     <p>Used : 04/2019 - 12/2019</p>
-                    <a>
+                    <a href='https://github.com/phucthang1101/YuriVisa_V2'>
                       <span
                         className='iconify'
                         data-icon='ant-design:github-outlined'
@@ -221,13 +221,13 @@ const Portfolio = () => {
                   </div>
                   <div className='items cart'>
                     {/* <i className="fa fa-external-link" aria-hidden="true"></i> */}
-                    <a>
+                    <a href='daidung.com.vn'>
                       <span
                         className='iconify'
                         data-icon='bx:bx-link-external'
                       ></span>
                     </a>
-                    <a>
+                    <a title='Private Repository'>
                       <span
                         className='iconify'
                         data-icon='ant-design:github-outlined'
@@ -270,7 +270,7 @@ const Portfolio = () => {
                         data-icon='bx:bx-link-external'
                       ></span>
                     </a>
-                    <a>
+                    <a href='https://github.com/phucthang1101/ViBotani'>
                       <span
                         className='iconify'
                         data-icon='ant-design:github-outlined'
@@ -281,21 +281,21 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              <div className='four grid-item todolist nodejs'>
+              <div className='four grid-item homeRepair mernStack'>
                 <div className='overlay'>
                   <div className='items'></div>
                   <div className='items head'>
-                    <p>First NodeJS App: Todo List</p>
+                    <p> Home Repair & Maintainance</p>
                   </div>
                   <div className='items subhead'>
                     <p>
-                      NodeJS + ExpressJS + MongoDB <br />
-                      (01/2020 - 01/2020)
+                    MongoDB + ExpressJS + ReactJS + NodeJS + NextJS (SSR)
+                      (In Progress)
                     </p>
                   </div>
                   <div
                     className='items price'
-                    onClick={() => openLightBoxHandler('Todo List','todolist')}
+                    onClick={() => openLightBoxHandler('Home Repair & Maintenance','homeRepair')}
                   >
                     <a>
                       <span
@@ -313,7 +313,7 @@ const Portfolio = () => {
                         data-icon='bx:bx-link-external'
                       ></span>
                     </a>
-                    <a>
+                    <a href='https://github.com/phucthang1101/house_maintenance'>
                       <span
                         className='iconify'
                         data-icon='ant-design:github-outlined'
@@ -340,7 +340,7 @@ const Portfolio = () => {
                     className='items price'
                     onClick={() => openLightBoxHandler('Expense Tracker ','expenseTracker')}
                   >
-                    <a>
+                    <a href='https://mysterious-cliffs-96399.herokuapp.com/'>
                       <span
                         className='iconify'
                         data-icon='zmdi-filter-center-focus'
@@ -356,7 +356,7 @@ const Portfolio = () => {
                         data-icon='bx:bx-link-external'
                       ></span>
                     </a>
-                    <a>
+                    <a href='https://github.com/phucthang1101/expense_tracker'>
                       <span
                         className='iconify'
                         data-icon='ant-design:github-outlined'
@@ -420,13 +420,13 @@ const Portfolio = () => {
                   </div>
                   <div className='items cart'>
                     {/* <i className="fa fa-external-link" aria-hidden="true"></i> */}
-                    <a>
+                    <a href='https://thangtran-c9a5a.firebaseapp.com/'>
                       <span
                         className='iconify'
                         data-icon='bx:bx-link-external'
                       ></span>
                     </a>
-                    <a>
+                    <a href='https://github.com/phucthang1101/location_sharing'>
                       <span
                         className='iconify'
                         data-icon='ant-design:github-outlined'

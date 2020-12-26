@@ -55,6 +55,7 @@ const getSlides = (projectName) => {
             'Use JS to add animation and work with AJAX to get data to put in Modal',
         },
       ];
+  
     case 'daidung':
       return [
         {
@@ -82,6 +83,7 @@ const getSlides = (projectName) => {
             'Allow Admin to edit image, order, caption of every slide in Owl-carousel2.',
         },
       ];
+  
     case 'todolist':
       return [
         {
@@ -98,6 +100,25 @@ const getSlides = (projectName) => {
           caption: 'Validate Email before submitting.',
         },
       ];
+  
+      case 'homeRepair':
+        return [
+          {
+            images: './static/images/home_repair/about.png',
+            caption:
+              'Customize React Motion working with Server Side Rendering',
+          },
+          {
+            images: './static/images/home_repair/contact.png',
+            caption: 'Create contact form and custom React Hook to show preview uploaded image',
+          },
+          {
+            images: './static/images/home_repair/service_card.png',
+            caption: 'Using getInitialProps (SSR) support content SEO',
+          },
+        ];
+    
+      
     case 'locationSharing':
       return [
         {
@@ -146,6 +167,7 @@ const getSlides = (projectName) => {
           caption: 'Show modal for User to confirm delete.',
         },
       ];
+  
     case 'expenseTracker':
       return [
         {

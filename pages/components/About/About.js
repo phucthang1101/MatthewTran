@@ -20,7 +20,8 @@ const About = () => {
       <div className='about-section__content row mx-5 mt-5'>
         <div className='col-md-5 col-sm-12'>
           <div className='about-section__content-avatar'>
-            <img src={`${DOMAIN}/static/images/avatar.jpg`} alt='about' />
+          {/* <div className='about-avatar'></div> */}
+            <img src={`${DOMAIN}/static/images/IMG_1299.jpg`} alt='about' />
           </div>
         </div>
         <div className='col-md-7 col-sm-12'>
