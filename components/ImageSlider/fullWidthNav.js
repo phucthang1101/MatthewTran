@@ -4,6 +4,7 @@ import { css, jsx } from '@emotion/core';
 import { DOMAIN } from '../../config';
 import SearchBlog from '../blog/SearchBlog';
 
+
 const FullWidthNav = (props) => {
   const { active, index, slide, page, singleBlog } = props;
   const handleClick = (index) => {
@@ -69,6 +70,7 @@ const FullWidthNavs = (props) => {
     <React.Fragment>
       <nav className='navbar navbar-expand-lg fullWidthNav-navbar'>
      
+      <a href='/'>
         <span
             className='navbar-brand blog-home__brand-name'
             style={{
@@ -78,6 +80,8 @@ const FullWidthNavs = (props) => {
           >
             MATTHEW
           </span>
+          </a>
+         
         <button
           className=' fullWidthNav-navbar__toggler d-flex d-md-none '
           type='button'

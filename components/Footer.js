@@ -257,7 +257,7 @@ const Footer = (props) => {
                       <br />
                       Check it out !
                     </p>
-                    <a href="../static/Matt's Resume.pdf" download>
+                    <a href="../static/Matt's Resume.pdf" target='_blank'>
                       <div className='download-btn btn-1'>
                         <div className='download-btn__top'>
                           <i className='fa fa-download'></i> DOWNLOAD

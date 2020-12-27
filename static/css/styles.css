@@ -388,19 +388,30 @@ a:hover {
 }
 .border-neon:hover,
 .border-neon:focus {
-  box-shadow: 0px 0px 10px 3px #b851d8, inset 0px 0px 10px 3px #a542c7;
-  border-color: #fdc5cf;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff94b8, 0 0 40px #ff94b8,
-    0 0 50px #ff94b8, 0 0 60px #ff94b8, 0 0 70px #ff94b8;
-}
+  box-shadow: 0px 0px 10px 3px #e55743, inset 0px 0px 10px 3px #e55743;
+  border-color: #ffc4c4;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e55743, 0 0 40px #e55743, 0 0 50px #e55743, 0 0 60px #e55743, 0 0 70px #e55743;
+  color: #000000;
+  }
 .border-neon {
-  width: 102%;
+  width: 113%;
   height: 102%;
   background-color: transparent;
   border: 2px solid #e55743;
-  color: #253842;
+  color: #000000;
   transition: all 0.3s ease-in-out;
-  font-weight: 700;
+ 
+  font-family: 'Arial', sans-serif;
+
+  font-size: 20px;
+}
+.border-neon a{
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+ 
+  font-family: 'Arial', sans-serif;
+
+  font-size: 20px;
 }
 /*about end */
 
@@ -875,8 +886,32 @@ ol {
   -o-transform: translateZ(0);
   transform: translateZ(0);
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
 }
-.cd-horizontal-timeline .events a:hover {
+.cd-horizontal-timeline .events a p:nth-child(1){
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.3rem;
+  padding-bottom: 15px;
+  color: #dedcdce6;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: all 0.3s;
+  margin:0;
+}
+.cd-horizontal-timeline .events a p:nth-child(2){
+  position: absolute;
+  top: 0;
+  padding-top: 20px;
+}
+.cd-horizontal-timeline .events a:hover p {
   text-decoration: none;
   color: #e5f56f;
   font-size: 1.4rem;
@@ -3963,6 +3998,7 @@ svg {
 
 .social-wrapper ul {
   list-style: none;
+  margin-top: 70px;
 }
 
 .social-wrapper ul li {
@@ -4006,6 +4042,9 @@ svg {
   color: #3b5998;
 }
 
+.social-wrapper ul li.linkedin .fa {
+  color: #2593C8;
+}
 .social-wrapper ul li.twitter:before {
   border: 2px solid #00aced;
 }
@@ -4096,6 +4135,20 @@ svg {
   );
 }
 
+.social-wrapper ul li.linkedin div.slider {
+  background:#2593C8
+
+}
+
+.social-wrapper ul li.linkedin:before {
+  border: 2px solid #2593C8;
+}
+.social-wrapper ul li.linkedin:after {
+  background: #2593C8;
+}
+.social-wrapper ul li.linkedin .fa {
+  color: #2593C8;
+}
 .social-wrapper ul li.google div.slider {
   background: #f70127;
 }
@@ -4104,7 +4157,8 @@ svg {
   background: #211f1f;
 }
 
-.social-wrapper ul li p {
+.social-wrapper ul li a {
+  margin:0;
   font-family: arial;
   text-transform: uppercase;
   font-size: 16px;
@@ -4137,7 +4191,7 @@ svg {
   border-radius: 25px;
 }
 
-.social-wrapper ul li:hover p {
+.social-wrapper ul li:hover a {
   opacity: 1;
   transition: all 1s 0.2s ease;
 }

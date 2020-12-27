@@ -26,15 +26,15 @@ const About = () => {
         </div>
         <div className='col-md-7 col-sm-12'>
           <div className='about-section__content--right'>
-            <h2>Front-End developer</h2>
+            <h2>Fullstack Developer</h2>
             <p>
               I am <span>Matthew Tran</span>. I am a simple , co-operative,
               responsible and quite weird person. I always analyze things
               carefully before starting any work.
             </p>
             <p>
-              I have experience in HTML5, CSS3, Javascript, JQuery, ReactJS, ASP
-              .NET, NodeJS and on. I always look for an opportunity to gain more
+              I have experience in HTML5, CSS3, Javascript, NodeJS, ReactJS, ASP
+              .NET, NextJS and on. I always look for an opportunity to gain more
               knowledge and experience.{' '}
             </p>
 
@@ -68,12 +68,12 @@ const About = () => {
                   <li>
                     {' '}
                     <span className='title'>Phone</span>{' '}
-                    <span className='value'>+123 456 789 012</span>{' '}
+                    <span className='value'>+1 519 999 5215</span>{' '}
                   </li>
                   <li>
                     {' '}
                     <span className='title'>Address</span>{' '}
-                    <span className='value'>124, Brik Lane</span>{' '}
+                    <span className='value'>Windsor, ON, Canada</span>{' '}
                   </li>
                   <li>
                     {' '}
@@ -90,7 +90,7 @@ const About = () => {
                 <div className='top door'></div>
                 <div className='bottom door'></div>
                 <a
-                  href='#section-8'
+                  href='#contact'
                   className='twitter-follow-button'
                   data-show-count='false'
                   data-size='large'
@@ -103,7 +103,7 @@ const About = () => {
               my skills
             </a> */}
               <div className='ct-btn'>
-                <button className='border-neon'>Download CV</button>
+                <button className='border-neon'><a href="../static/Matt's Resume.pdf" target="_blank">Download CV</a></button>
               </div>
               {/* <div>
             <a

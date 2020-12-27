@@ -3,7 +3,7 @@ import jQuery from 'jquery';
  const initTimeline = () => {
   jQuery(document).ready(function ($) {
     var timelines = $('.cd-horizontal-timeline'),
-      eventsMinDistance = 100;
+      eventsMinDistance = 90;
 
     timelines.length > 0 && initTimeline(timelines);
 
@@ -241,10 +241,14 @@ import jQuery from 'jquery';
             timelineComponents['timelineDates'][i]
           ),
           distanceNorm =
-            Math.round(distance / timelineComponents['eventsMinLapse']) + 2;
+            Math.round(distance / timelineComponents['eventsMinLapse']) + 1.5;
         timelineComponents['timelineEvents']
           .eq(i)
           .css('left', distanceNorm * min + 'px');
+          console.log(distance,distanceNorm);
+          console.log(  timelineComponents['timelineDates'][0],
+          timelineComponents['timelineDates'][i]);
+          console.log(timelineComponents['eventsMinLapse'])
       }
     }
 
