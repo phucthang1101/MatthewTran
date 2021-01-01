@@ -32,7 +32,7 @@ class MyDocument extends Document {
             name='viewport'
             content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi'
           />
-
+          <link rel='icon' type='image/png' href='/static/images/wo_mt2.png' />
           <link
             rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'

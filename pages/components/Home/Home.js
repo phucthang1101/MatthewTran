@@ -69,7 +69,7 @@ const Home = (props) => {
             >
               <div className='col-xl-3 col-6 logo-area'>
                 <div className='logo'>
-                  <a href='index.html' className='navbar-brand-cus'>
+                  <a href='/' className='navbar-brand-cus'>
                     <span className='logo'>MATTHEW</span>
                   </a>
                 </div>

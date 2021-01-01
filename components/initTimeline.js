@@ -245,10 +245,10 @@ import jQuery from 'jquery';
         timelineComponents['timelineEvents']
           .eq(i)
           .css('left', distanceNorm * min + 'px');
-          console.log(distance,distanceNorm);
-          console.log(  timelineComponents['timelineDates'][0],
-          timelineComponents['timelineDates'][i]);
-          console.log(timelineComponents['eventsMinLapse'])
+        //  console.log(distance,distanceNorm);
+         // console.log(  timelineComponents['timelineDates'][0],
+       //   timelineComponents['timelineDates'][i]);
+         // console.log(timelineComponents['eventsMinLapse'])
       }
     }
 
