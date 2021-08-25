@@ -125,8 +125,8 @@ const Footer = (props) => {
                   <li>
                     <i className='fa fa-phone' aria-hidden='true'></i>
 
-                    <a href='tel:5199995215' className='footer-nav-left__link'>
-                    +1 519 999 5215
+                    <a href='tel:2267244502' className='footer-nav-left__link'>
+                    +1 (226) 724-4502
                     </a>
                   </li>
 

@@ -68,7 +68,7 @@ const About = () => {
                   <li>
                     {' '}
                     <span className='title'>Phone</span>{' '}
-                    <span className='value'>+1 519 999 5215</span>{' '}
+                    <span className='value'>+1 226 724 4502</span>{' '}
                   </li>
                   <li>
                     {' '}

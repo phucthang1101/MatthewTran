@@ -79,9 +79,9 @@ const Contact = () => {
                   <span>
                     <a
                       className='montserrat weight-regular'
-                      href='tel:5199995215'
+                      href='tel:2267244502'
                     >
-                      +1 519 999 5215
+                     +1 (226) 724-4502
                     </a>
                   </span>
                 </li>
